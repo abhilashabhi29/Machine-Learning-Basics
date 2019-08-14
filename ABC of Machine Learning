@@ -1,0 +1,194 @@
+The ABC’s of Machine Learning :
+
+Heard of Machine learning? You might have seen different videos on Youtube, read a few blogs.
+But how can a person do it, Does he need to be a mathematical guy ?  or a computer science guy?
+
+What you need to know before you jump into Machine Learning.
+In the last couple of years there has been a renewed interest in machine learning. the Buzz around Machine Learning has created a strong interest in techies getting their hands Dirty. 
+Before diving straight into Machine learning lets see few important fundamental terms and concepts that works handy in the process of learning machine learning.
+
+Types of machine learning Algorithms:
+1. Supervised learning:
+Supervised learning as the name indicates the presence of a supervisor as a teacher who guides you to the output. Supervised learning is a learning in which try to teach/train the machine using data which is well labeled(tagged with correct answer). After completing the training process, machine is loaded with a new set of examples(data) so that supervised learning algorithm analyses the training data(set of training examples) and produces a correct outcome from labeled data.
+
+Example:
+Basket of fruits(Apple, Banana, Orange) and differentiating each one like apple banana Orange
+Common algorithms used:
+Nearest Neighbor
+Naive Bayes
+Decision Trees
+Linear Regression, Logistic Regression
+Support Vector Machines (SVM)
+
+
+2. Unsupervised Learning:
+Unsupervised learning as the name indicates the absence of a supervisor, where machine is trained using information that is neither classified nor labeled and allowing the algorithm to act on that information without guidance. Here the machine groups unsorted information according to similarities, patterns and differences without any prior training of data.
+Unlike supervised learning, since there is no teacher so machine is restricted to find the hidden structure in unlabeled data by our-self.
+
+Example: 
+couple of Animals differentiating dog, cat etc
+
+Common algorithms used:
+	Clustering: A clustering is as simple as grouping something depending on their properties, such as grouping customers by purchasing behavior or their income.   
+            Association:  An association is as simple as discovering rules that describe your data, such as people that buy X also tend to buy Y	
+
+
+	3. Semi-supervised Learning:
+These problems sit in between supervised and unsupervised learning Problems, where you have input data (X) and only some of the data is labeled (Y) are called semi-supervised learning problems.
+
+Example :
+A photo archive where only some of the images are labeled, (e.g. dog, cat, person) and the majority are unlabeled.
+
+
+
+4. Reinforcement Learning
+Reinforcement learning is a kind of dynamic programming that trains algorithms using a scheme of reward and punishment in the context of artificial intelligence. By interacting with its setting, a reinforcement learning learns from algorithm or agent .
+
+Main points in Reinforcement learning –
+Input: The input should be an initial state from which the model will start
+Output: There are many possible output as there are a variety of solutions to a particular problem
+Training: The training is based upon the input, The model will return a state and the user will decide to reward or punish the model based on its output.
+The model keeps continues to learn.
+The best solution is decided based on the maximum reward.
+
+Common algorithms:
+	Q-Learning
+Temporal Difference (TD)
+Deep Adversarial Networks
+
+
+
+https://wordstream-files-prod.s3.amazonaws.com/s3fs-public/machine-learning.png
+Some common terms:
+
+Classification:
+1. Binary classification is  predicting a discrete label where there are only two possible potential results. Such as Present or Not Present. if there are more than 2 possible outcomes then we call it Multi-label classification
+
+2. Multi-label classification occurs when various results are feasible. In order to understand text, it is helpful for customer segmentation, picture categorization, and feeling assessment. 
+We use models such as Naive Bayes, K-Nearest Neighbors, and SVMs to conduct these classifications. 
+
+Example: In the below figure we are trying to predict the size of the fruits according to some parameters and they are classified into three sizes Small(S), Medium(M), or Large(L)
+
+                     
+		       https://www.codecademy.com/articles/regression-vs-classification
+Regression:
+Regression is used to predict outputs that are continuous. Output can be determined based on inputs  to the model rather than the set of outputs.
+
+Example:  In the below figure we are trying to predict the size of the fruits in centimeters (cm) which are continuous values.
+	          
+https://www.codecademy.com/articles/regression-vs-classification
+
+Confusion Matrix:
+Confusion Matrix is a matrix representation of correct and incorrect predictions made by the model.As the name suggests Confusion Matrix is the measure of the correctness of the predictions made by the Classification model.
+Consider where we predict whether the person is suffering from a Disease(event) or No Disease(no event). Confusion matrix will be made based on 4 conditions
+
+· for correctly predicted event values “true positive”.
+· for incorrectly predicted event values “false positive”.
+· for correctly predicted no-event values “true negative”.
+· for incorrectly predicted no-event values “false negative”.
+Let’s suppose we have 1000 testing data out of which 500 has Disease (D) and 500 No Disease (ND) and our model predicted the outcome as 450 Disease (D) and 550 No Disease, in this case, our confusion matrix will be (Fig 1)
+ 
+
+
+
+
+
+
+
+
+
+
+Class 1
+Class 2
+
+
+
+
+
+
+
+
+
+
+
+
+Predicted
+
+
+
+
+
+
+
+
+
+
+
+
+D
+ND
+
+
+Class 1
+
+Actual
+
+
+D
+450 
+50
+500
+Class 2
+ND
+0
+500
+500
+
+
+
+
+
+
+
+
+
+
+450
+550
+
+
+Fig 1 : Confusion Matrix
+true positive: 450 (Correctly predicted event values i.e upper left green cell).
+false positive: 0 (no event values predicted as an event is 0 i.e lower left red cell)
+true negative: 500 (Correctly predicted no event values i.e lower right green cell)
+false negative: 50 (event values predicted as no event values i.e upper right red cell)
+Green diagonal represents correct predictions and red diagonal represents incorrect predictions hence the total number of correct predictions is 450+500= 950
+And incorrect predictions is 50+0 = 50
+Accuracy Score:
+Accuracy score also provides a measure of accuracy or correctness of the predictions made by classification model but it is between a range of 0 to 1 which is then multiplied by 100 to get a score between 0 to 100, the closer the value to 1 more accurate is the model.
+Accuracy score is Calculated as :
+Accuracy score = ( Total Correct Predictions/Total No of Predictions )* 100
+Considering the previous scenario where the  accuracy score will be =
+950/1000 * 100 = 0.95*100 = 95%
+
+
+Mean Absolute Error and Root Mean Squared Error:
+While classification models can be assessed very well using Accuracy Score and Confusion Matrix, regression models are assessed using Mean Absolute Error and Root Mean Squared Error as our regression model's goal is to estimate values as close to real values.
+Closer the MAE and RMSE to zero more accurate is the model.
+Mean Absolute Error:
+It is calculated as the average(mean) of the absolute error values, where “absolute” means “made positive” so that they can be added together.
+MAE = sum( abs(predicted- actual ) / total predictions
+Consider an Example;
+Actual Values = [2,4,6,8,10] , Predicted Values = [4,6,8,10,12]
+MAE = abs(4–2 + 6–4 + 8–6 + 10–8+12-10)/4 = 2.5
+Root Mean Squared Error:
+Root Mean Squared Error. Shortened as RMSE, the metric is sometimes called Mean Squared Error or MSE, dropping the Root part from the calculation and the name.
+RMSE is calculated as the square root of the mean of the squared differences between actual outcomes and predicted outcomes. Squaring each error the values turns positive, and the square root of the mean squared error returns the error metric.
+RMSE = sqrt( sum( (predicted- actual)²) / total predictions)
+Actual Values = [2,4,6,8,10] , Predicted Values = [4,6,8,10,12]
+RMSE = sqrt((10)²/4) = sqrt(100/4) = sqrt(25) = 5
+ 
+
+Once you are familiar with the above terms and have a basic knowledge of python you are ready to get your hands dirty with trying out some simple ML models.
+
+
